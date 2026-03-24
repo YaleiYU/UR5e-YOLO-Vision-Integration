@@ -1,0 +1,37 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# Global configuration for UR5e-YOLO-Vision-Integration
+# Edit the values below to match your setup before running any script.
+# ──────────────────────────────────────────────────────────────────────────────
+
+robot:
+  # IP address of the UR5e controller (check on the teach pendant)
+  ip: "192.168.1.100"
+  # TCP speed (m/s) and acceleration (m/s²) used for moveL motions
+  speed: 0.1
+  acceleration: 0.5
+  # Tool-centre-point offset [x, y, z, rx, ry, rz] in metres / radians
+  # applied on top of the flange frame (adjust for your gripper)
+  tcp_offset: [0.0, 0.0, 0.17, 0.0, 0.0, 0.0]
+  # Home joint angles [rad] — a safe, out-of-the-way configuration
+  home_joints: [0.0, -1.5708, 1.5708, -1.5708, -1.5708, 0.0]
+
+camera:
+  width: 640
+  height: 480
+  fps: 30
+
+yolo:
+  # Path to a YOLOv8 weights file (.pt).  Use a COCO pre-trained model or
+  # provide the path to your own fine-tuned model.
+  model: "yolov8n.pt"
+  # Minimum confidence threshold for accepted detections (0–1)
+  confidence: 0.5
+  # Name of the object class the robot should pick up
+  target_class: "cup"
+
+calibration:
+  # Path where the hand-eye extrinsic transform (4×4 numpy array) is saved.
+  # Run src/calibration.py to generate this file.
+  extrinsic_file: "config/hand_eye_transform.npy"
+  # Approach height (metres) above the detected object before descending
+  approach_height: 0.05
