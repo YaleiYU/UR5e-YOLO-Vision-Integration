@@ -58,9 +58,6 @@ graph LR
 
 ## ▶️ Launch Instructions
 
-> ⚠️ **Important:** Run the following steps in order.
-
----
 
 ### 1️⃣ Launch RealSense Camera
 
@@ -138,7 +135,7 @@ ur5e_ros2_lookAt_control.m
 - **Publishes:** `/urscript_interface/script_command`
 - **Description:**
   - Subscribes to `/confidence`
-  - Computes robot motion
+  - Computes robot motion (the example ur5e_ros2_lookAt_control.m implements a given sequence of viewpoint positions)
   - Sends URScript commands to UR5e
 
 ---
