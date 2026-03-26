@@ -43,7 +43,7 @@ graph LR
 ```
 
 The experimental setting is given in the following figure:
-![ROS2 System Diagram](Results/expt_setting.png)
+![ROS2 System Diagram](Figures/expt_setting.png)
 
 ---
 
