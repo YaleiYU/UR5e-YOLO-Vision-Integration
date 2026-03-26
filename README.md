@@ -42,9 +42,6 @@ graph LR
     end
 ```
 
-The experimental setting is given in the following figure:
-![ROS2 System Diagram](Figures/expt_setting.png)
-
 ---
 
 
@@ -150,6 +147,10 @@ ur5e_ros2_lookAt_control.m
 ```
 Camera → Detection → Confidence → Control → Robot
 ```
+
+The experimental setting is given in the following figure:
+![ROS2 System Diagram](Figures/expt_setting.png)
+
 
 ---
 
